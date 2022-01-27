@@ -37,26 +37,26 @@ public class QueryProcessor {
 
             }
         }
-        if (query.toLowerCase().contains("plus")) {
-            String queryWords[] = query.split(" ");
-            int answer = 0;
-            if (queryWords[1].equals("what") && queryWords[2].equals("is") && queryWords.length == 6) {
-                answer = Integer.parseInt(queryWords[3]) + Integer.parseInt(queryWords[5]);
-            }
-            return String.valueOf(answer);
+//        if (query.toLowerCase().contains("plus")) {
+//            String queryWords[] = query.split(" ");
+//            int answer = 0;
+//            if (queryWords[1].equals("what") && queryWords[2].equals("is") && queryWords.length == 6) {
+//                answer = Integer.parseInt(queryWords[3]) + Integer.parseInt(queryWords[5]);
+//            }
+//            return String.valueOf(answer);
+//
+//        }
 
-        }
-
-        if (query.toLowerCase().contains("largest")) {
-            String queryWords[] = query.split(" ");
-            int max = Integer.MIN_VALUE;
-            if (queryWords[8].equals("largest:")) {
-                for (int i = 9; i < queryWords.length; i++) {
-                    max = Math.max(max, Integer.parseInt(queryWords[i]));
-                }
-            }
-            return String.valueOf(max);
-        }
+//        if (query.toLowerCase().contains("largest")) {
+//            String queryWords[] = query.split(" ");
+//            int max = Integer.MIN_VALUE;
+//            if (queryWords[8].equals("largest:")) {
+//                for (int i = 9; i < queryWords.length; i++) {
+//                    max = Math.max(max, Integer.parseInt(queryWords[i]));
+//                }
+//            }
+//            return String.valueOf(max);
+//        }
 
         return "";
     }
