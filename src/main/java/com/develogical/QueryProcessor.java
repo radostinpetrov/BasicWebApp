@@ -17,6 +17,26 @@ public class QueryProcessor {
             return "vitamin C";
         }
 
+        if (query.toLowerCase().contains("what is")) {
+            if (query.toLowerCase().contains("plus")) {
+                String queryWords[] = query.split(" ");
+                int answer = 0;
+                if (queryWords[1].equals("what") && queryWords[2].equals("is") && queryWords.length == 6) {
+                    answer = Integer.parseInt(queryWords[3]) + Integer.parseInt(queryWords[5]);
+                }
+                return String.valueOf(answer);
+
+            }
+            if (query.toLowerCase().contains("multiplied by")) {
+                String queryWords[] = query.split(" ");
+                int answer = 0;
+                if (queryWords[1].equals("what") && queryWords[2].equals("is") && queryWords.length == 7) {
+                    answer = Integer.parseInt(queryWords[3]) * Integer.parseInt(queryWords[6]);
+                }
+                return String.valueOf(answer);
+
+            }
+        }
         if (query.toLowerCase().contains("plus")) {
             String queryWords[] = query.split(" ");
             int answer = 0;
