@@ -14,7 +14,7 @@ public class QueryProcessor {
         }
 
         if (query.toLowerCase().contains("your name")) {
-            return "My name is Vitamin C.";
+            return "vitamin C";
         }
         return "";
     }
