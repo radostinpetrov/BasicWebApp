@@ -29,7 +29,13 @@ public class QueryProcessor {
 
         if (query.toLowerCase().contains("largest")) {
             String queryWords[] = query.split(" ");
-
+            int max = Integer.MIN_VALUE;
+            if (queryWords[8].equals("largest:")) {
+                for (int i = 9; i < queryWords.length; i++) {
+                    max = Math.max(max, Integer.parseInt(queryWords[i]));
+                }
+            }
+            return String.valueOf(max);
         }
 
         return "";
