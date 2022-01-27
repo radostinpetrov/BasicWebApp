@@ -16,6 +16,17 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("your name")) {
             return "vitamin C";
         }
+
+        if (query.toLowerCase().contains("plus")) {
+            String queryWords[] = query.split(" ");
+            int answer = 0;
+            if (queryWords[0].equals("what") && queryWords[1].equals("is") && queryWords.length == 5) {
+                answer = Integer.parseInt(queryWords[2]) + Integer.parseInt(queryWords[4]);
+            }
+            return String.valueOf(answer);
+
+        }
+
         return "";
     }
 }
